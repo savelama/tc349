@@ -1,14 +1,13 @@
 body {
     background: #ccc;
     margin: 0;
-    border-top: 5px solid #424242;
     font-family: "Helvetica", sans-serif;
     line-height: 1.4em;
 }
 
 .container {
     background: #fff;
-    width: 600px;
+    width: 800px;
     margin: 0 auto;
 }
 
@@ -24,31 +23,45 @@ h1, h2, h3 {
 }
 
 h1 {
-    background: #aaa;
     padding: 20px 15px;
     color: #006633;
     text-shadow: 1px 1px 2px #424242;
     text-align:center;
+    font-size: 2.5em;
 }
 
 h2 {
     text-align:center;
 }
 
-ul.nav {
+header, footer {
+    background: #aaa;
+    text-align: center;
+}
+
+/* Footer-specific CSS */
+footer {
+    font-size: 0.75em;
+}
+
+footer p {
+    border-top: 2px solid #006633;
+}
+
+/* Header-specific nav CSS*/
+header ul {
     list-style-type:none;
     margin:0;
     padding:5px;
-    text-align:center;
-    background:#aaa;
-    border-bottom: 2px solid #006633;
+    border-bottom: 2px solid #006633
 }
 
-li.nav {
+header li {
     display:inline;
     margin:0px 5px 0px 5px;
 }
 
-#content {
+/* Main content section CSS */
+section#content {
     padding:15px;
 }
