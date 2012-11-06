@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>jQuery Demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/screen.css" media="screen">
+    <script type="text/javascript" src="js/jquery-1.8.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var myQuote = $('#my_quote');
+            
+            myQuote.hide();
+            
+            $('.button').click(function(){
+                myQuote.show(500);
+            });
+        });
+    </script>
+  </head>
+  <body>
+      <div id="container">
+          <header>
+            <h1>jQuery Demo</h1>
+          </header>
+
+            <div id="content">
+                <p>This page will demonstrate very basic jQuery functionality.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut convallis lectus a metus dictum in scelerisque quam luctus. Proin non venenatis magna. Curabitur aliquet laoreet elit in vestibulum. Sed sed tempor purus. Cras lorem quam, rhoncus in tempor et, dictum vel ligula. Donec hendrerit enim eu mi lacinia quis pretium dolor condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tristique tempor neque non interdum. Nulla tempor tincidunt gravida. Vestibulum euismod euismod fringilla. Proin in tortor ac lectus pharetra placerat a ut urna.</p>
+
+                <p>Duis ornare pulvinar ipsum ut tincidunt. Duis a sapien nulla. Nam ut nisi nec sapien suscipit interdum et a risus. Phasellus vehicula, augue ac facilisis pulvinar, est lectus sagittis nibh, ut aliquet nibh risus auctor purus. Morbi ligula est, faucibus sed ultricies ac, imperdiet at metus. Etiam sagittis elementum orci nec convallis. Nulla sodales euismod imperdiet. Nulla in commodo sem. Suspendisse iaculis ultricies rhoncus. Nam vel commodo eros. Vestibulum placerat sem non est ullamcorper molestie. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean ut orci libero, a aliquam sapien. Nunc id orci metus, id eleifend purus. Cras a neque vitae velit aliquam congue in nec ipsum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+
+                <p>Nullam eget justo sed orci cursus rutrum id pharetra nisi. Duis vehicula lorem in quam aliquam et interdum tortor vestibulum. Fusce libero risus, venenatis vel aliquet nec, dictum et odio. Nulla lorem urna, egestas et commodo ut, condimentum sit amet elit. Praesent turpis risus, euismod nec accumsan id, facilisis sed turpis. Phasellus gravida tortor quis nisi lobortis dictum. Aliquam erat volutpat. Donec eleifend rhoncus odio. Sed mollis accumsan auctor. Phasellus et turpis mi. Nam sit amet ligula a velit adipiscing sollicitudin at et metus.</p>
+                <p><a href="#" class="button">Click here to show the blockquote!</a></p>
+
+                <blockquote id="my_quote"><p>Curabitur nec nisl at augue hendrerit gravida. Praesent at leo mi. Pellentesque ut mi tellus, et pellentesque nunc. Curabitur consectetur augue et felis ultricies vehicula venenatis sapien pulvinar. Vivamus auctor lorem sit amet est fringilla sollicitudin. Praesent iaculis, eros id imperdiet pulvinar, metus lectus eleifend orci, et cursus arcu ligula sit amet est. Aenean vel libero elit, sit amet ultrices tellus. Nulla facilisi. Integer in augue libero, a ornare magna. Maecenas convallis sem id diam cursus imperdiet. Donec luctus bibendum rhoncus. </p></blockquote>
+            </div>
+            <footer>
+                Matthew Savela - TC349 - Fall 2012
+            </footer>
+      </div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+body {
+    background: #ccc;
+}
+h1 {
+    text-align: center;
+    border-bottom: 1px solid black;
+    margin: 5px 0px;
+    padding: 10px 0px;
+}
+
+#container {
+    margin: 0 auto;
+    width: 960px;
+    background: #fff;
+}
+
+#content {
+    margin: 15px 15px;
+}
+
+header {
+    color: white;
+    background-color: #006633;
+}
+
+footer {
+    text-align: center;
+    font-weight: bold;
+    margin: 5px 0px;
+    padding: 10px 0;
+    border-top: 1px solid black;
+    color: white;
+    background-color: #006633;
+}
+
+.button {
+    color: #fff;
+    background-color: #000099;
+    padding: 5px;
+    text-decoration: none;
+}
