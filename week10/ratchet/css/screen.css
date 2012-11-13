@@ -1,0 +1,17 @@
+.center-pad {
+    padding: 5px 0px;
+    text-align: center;
+}
+
+.pull-center {
+    text-align: center;
+}
+
+.author {
+    color: #666666;
+    font-style: italic;
+}
+
+.synposis {
+    padding: 10px 0px;
+}
