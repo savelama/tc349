@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact Matthew</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="includes/css/screen.css" type="text/css">
+        <link rel="stylesheet" href="includes/css/bootstrap.css" type="text/css">
+        <link href="includes/css/bootstrap-responsive.css" rel="stylesheet">
+        <script type="text/javascript" src="includes/js/bootstrap.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <a class="brand" href="index.html">Matthew's Personal Homepage</a>
+                        <ul class="nav pull-right">
+                            <li><a href="index.html"><i class="icon-home"></i> Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="education.html">Education</a></li>
+                            <li><a href="includes/files/resume.pdf" target="_blank">Resume</a></li>
+                            <li class="active"><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <div id="content">
+                <div class="page-header">
+                    <h1 class="pull-center">Contact Information</h1>
+                </div>
+                <div>
+                    <?php
+                        if (isset($_GET['s'])) {
+                            echo "<div class=\"alert alert-success\">".$_GET['s']."</div>";
+                        } elseif (isset($_GET['e'])) {
+                            echo "<div class=\"alert alert-error\">".$_GET['e']."</div>";
+                        }
+                    ?>
+                    <p>
+                        So you wish to get in-touch with Matthew? Well, you're in luck. There are many ways you can do so.
+                        <br /><br />
+                        E-mail: <a href="mailto:savelama@gmail.com">savelama@gmail.com</a><br />
+                        Twitter: <a href="http://twitter.com/savelama" target="_blank">@savelama</a><br />
+                        LinkedIn: <a href="http://www.linkedin.com/pub/matthew-savela/5a/973/928" target="_blank">Matthew's LinkedIn Profile</a>
+                        <br /><br />
+                        If you would prefer, you can also use the form before to send an e-mail to him!
+                    </p>
+                </div>
+                <div id="contactform">
+                    <form method="POST" action="includes/formpost.php">
+                        <div class="control-group">
+                            <label class="control-label" for="input1">Name</label>
+                            <div class="controls">
+                                <input type="text" name="contact_name" id="input1" placeholder="Your name">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="input2">Email Address</label>
+                            <div class="controls">
+                                <input type="text" name="contact_email" id="input2" placeholder="Your email address">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="input3">Message</label>
+                            <div class="controls">
+                                <textarea name="contact_message" id="input3" rows="8" class="span5" placeholder="What would you like to say to Matthew?"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <input type="hidden" name="formtype" value="email">
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
