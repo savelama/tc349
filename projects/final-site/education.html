@@ -7,7 +7,18 @@
         <link rel="stylesheet" href="includes/css/bootstrap.css" type="text/css">
         <link href="includes/css/bootstrap-responsive.css" rel="stylesheet">
         <script type="text/javascript" src="includes/js/bootstrap.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js" type="text/javascript"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(".toggler").hide();
+                $(".toggle").click(function(){
+                    $("#toggler" + $(this).attr('target')).slideToggle('medium');
+                    return false;
+                });
+            });
+        </script> 
     </head>
     <body>
         <div class="container">
@@ -25,6 +36,189 @@
                     </div>
                 </div>
             </header>
+            <div id="content">
+                <h1 class="page-header">Education</h1>
+                <img src="includes/img/michiganstate.jpg" alt="Michigan State Logo" height="400" width="500" />
+                <p>
+                    While at Michigan State University, Matthew took a wide variety of courses. Listed below are courses that he found particularly interesting. Click on the course name to display information about the course.
+                </p>
+                <div class="half-left">
+                    <h3>Computer Science</h3>
+                    <ul class="nobullet">
+                        <li>
+                            <a class="toggle" target="1">CSE100 - Computer Science as a Profession</a>
+                        </li>
+                        <li id="toggler1" class="toggler" style="display: none;">
+                            <div>
+                                <span>The computing and programming profession. Professionalism and ethics. Industry practice. Experiments with programming.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="toggle" target="2">CSE231 - Introduction to Programming I</a>
+                        </li>
+                        <li id="toggler2" class="toggler" style="display: none;">
+                            <div>
+                                <span>Introduction to programming using Python. Design, implementation and testing of programs to solve problems such as those in engineering, mathematics and science. Programming fundamentals, functions, objects, and use of libraries of functions.</span>                            
+                            </div>
+                        </li>
+                        <li>
+                            <a class="toggle" target="3">CSE232 - Introduction to Programming II</a>
+                        </li>
+                        <li id="toggler3" class="toggler" style="display: none;">
+                            <div>
+                                <span>Continuation of object-centered design and implementation in C++. Building programs from modules. Data abstraction and classes to implement abstract data types. Static and dynamic memory allocation. Data structure implementation and algorithm efficiency. Lists, tables, stacks, and queues. Templates and generic programming.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="toggle" target="4">CSE260 - Discrete Structures in Computer Science</a>
+                        </li>
+                        <li id="toggler4" class="toggler" style="display: none;">
+                            <div>
+                                <span>Propositional and first order logic. Equivalence and methods of proof. Basics of counting. Set operations, relations, functions. Grammars and finite state automata. Discrete probability. Applications to computer science and engineering.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="toggle" target="5">CSE320 - Computer Organization and Architecture</a>
+                        </li>
+                        <li id="toggler5" class="toggler" style="display: none;">
+                            <div>
+                                <span>Boolean algebra and digital logic. Combinational and sequential circuits. Representations of data and instructions. Architecture and major components of computer systems. Assembly language programming and interfacing to high level languages. Assembler and linker processing. </span>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="toggle" target="6">CSE331 - Algorithms and Data Structures</a>
+                        </li>
+                        <li id="toggler6" class="toggler" style="display: none;">
+                            <div>
+                                <span>Linear data structures, trees, graphs and algorithms which operate on them. Fundamental algorithms for searching, sorting, string matching, graph problems. Design and analysis of algorithms. </span>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="toggle" target="7">CSE335 - Software Design</a>
+                        </li>
+                        <li id="toggler7" class="toggler" style="display: none;">
+                            <div>
+                                <span>Development of large software products, libraries, and product families. Object-oriented programming using inheritance and polymorphism. Design methods. Specification and the use of contracts to design reliable software. Configuration management and life-cycle issues. </span>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="toggle" target="8">CSE410 - Operating Systems</a>
+                        </li>
+                        <li id="toggler8" class="toggler" style="display: none;">
+                            <div>
+                                <span>Principles and evolution of operating systems. Process and processor management. Concurrent processes and threads. Primary and secondary storage management. Case studies of modern operating systems. </span>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="toggle" target="9">CSE422 - Computer Networks</a>
+                        </li>
+                        <li id="toggler9" class="toggler" style="display: none;">
+                            <div>
+                                <span>Computer network architectures and models. Physical media and signaling. Data link protocols. Medium access control. Routing and IP. Transport services including TCP/UDP. Network applications. Local-area and wide-area networks. </span>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="toggle" target="10">CSE425 - Introduction to Computer Security</a>
+                        </li>
+                        <li id="toggler10" class="toggler" style="display: none;">
+                            <div>
+                                <span>Theory and practice of security engineering. Security protocols. Cryptography and cryptanalysis. Smartcards. Network security and intrusion detection. Common system attacks. </span>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="toggle" target="11">CSE435 - Software Engineering</a>
+                        </li>
+                        <li id="toggler11" class="toggler" style="display: none;">
+                            <div>
+                                <span>Software lifecycle including specification, design, coding, testing, and verification of a software product. Stepwise refinement and traceability. Software maintenance and documentation.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="toggle" target="12">CSE450 - Translation of Programming Languages (Compilers)</a>
+                        </li>
+                        <li id="toggler12" class="toggler" style="display: none;">
+                            <div>
+                                <span>Theory and practice of programming language translation. Languages, grammars and parsing. Lexical, syntactic and semantic analysis. Compile-time error handling. Code optimization and code generation. </span>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="toggle" target="13">CSE491 - Database-backed Web Development </a>
+                        </li>
+                        <li id="toggler13" class="toggler" style="display: none;">
+                            <div>
+                                <span>Topics covered will include:</span>
+                                <ul>
+                                    <li>HTTP and WSGI</li>
+                                    <li>JavaScript, JQuery, and AJAX</li>
+                                    <li>Jinja2 templating</li>
+                                    <li>Multiprocessing and multithreading</li>
+                                    <li>Intermediate Python programming</li>
+                                    <li>Version control with Git and Github</li>
+                                    <li>Using the Sqlite3 embedded database system</li>
+                                    <li>Django and Pyramid</li>
+                                    <li>Mashups</li>
+                                    <li>Cloud computing on Amazon</li>
+                                    <li>Automated unit and functional testing</li>
+                                    <li>Continuous integration testing</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="toggle" target="14">CSE498 - Collaborative Design</a>
+                        </li>
+                        <li id="toggler14" class="toggler" style="display: none;">
+                            <div>
+                                <span>Development of a comprehensive software and/or hardware solution to a problem in a team setting with emphasis on working with a client. Participation in a design cycle including specification, design, implementation, testing, maintenance, and documentation. Issues of professionalism, ethics, and communication. </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>                
+                <div class="half-right">
+                    <h3>Telecommunication, Information Studies, &amp; Media</h3>
+                    <ul class="nobullet">
+                        <li>
+                            <a class="toggle" target="15">TC101 - Understanding Media in the Information Age</a>
+                        </li>
+                        <li id="toggler15" class="toggler" style="display: none;">
+                            <div>
+                                <span>Critique and analysis of media including television, radio, film, handhelds, video games, social media and the Internet. Media history, policy, industry structure, and ethics. Technology, industry and social trends affecting the media in the information society. </span>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="toggle" target="16">TC201 - Introduction to Media and Information Technology</a>
+                        </li>
+                        <li id="toggler16" class="toggler" style="display: none;">
+                            <div>
+                                <span>Operational principles and applications of media and information technologies. </span>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="toggle" target="17">TC349 - Client-Side Web Development</a>
+                        </li>
+                        <li id="toggler17" class="toggler" style="display: none;">
+                            <div>
+                                <span>Development of web sites, services, and applications that employ primarily client-side technologies. </span>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="toggle" target="18">TC361 - Information and Communication Technology Management</a>
+                        </li>
+                        <li id="toggler18" class="toggler" style="display: none;">
+                            <div>
+                                <span>Technologies and organizations that support data communications infrastructure. Case studies of businesses that develop the infrastructure.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="toggle" target="19">TC401 - Topics in Media Impacts on Society</a>
+                        </li>
+                        <li id="toggler19" class="toggler" style="display: none;">
+                            <div>
+                                <span>Cultural, technological, and design evolution of media. Current and historical genres, content, audience, and industries for media. Conventional and emerging theories of media processes and effects. Critical examination of empirical research concerning social impacts of media. </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </body>
 </html>

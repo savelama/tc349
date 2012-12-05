@@ -16,7 +16,12 @@ footer {
     line-height: 20px;
 }
 
-
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding:10px;
+}
 
 .strong {
     font-weight: bold;
@@ -24,4 +29,32 @@ footer {
 
 .pull-center {
     text-align: center;
+}
+
+.nobullet {
+    list-style-type: none;
+}
+
+.half-left {
+    width: 48%;
+    float: left;
+    margin-right: 0px 2%;
+}
+
+.half-right {
+    width: 48%;
+    float: right;
+    margin: 0px 2%;
+}
+
+.toggle {
+    cursor: ponter;
+}
+
+.toggler div {
+    background-clip: padding-box;
+    border: 5px solid #ccc;
+    border-radius: 8px 8px 8px 8px;
+    margin: 10px;
+    padding: 10px;
 }
