@@ -31,11 +31,11 @@
                 </div>
                 <div>
                     <?php
-                        if (isset($_GET['s'])) {
-                            echo "<div class=\"alert alert-success\">".$_GET['s']."</div>";
-                        } elseif (isset($_GET['e'])) {
-                            echo "<div class=\"alert alert-error\">".$_GET['e']."</div>";
-                        }
+                    if (isset($_GET['s'])) {
+                    echo "<div class=\"alert alert-success\">".$_GET['s']."</div>";
+                    } elseif (isset($_GET['e'])) {
+                    echo "<div class=\"alert alert-error\">".$_GET['e']."</div>";
+                    }
                     ?>
                     <p>
                         So you wish to get in-touch with Matthew? Well, you're in luck. There are many ways you can do so.
@@ -50,19 +50,19 @@
                 <div id="contactform">
                     <form method="POST" action="includes/formpost.php">
                         <div class="control-group">
-                            <label class="control-label" for="input1">Name</label>
+                            <label class="control-label" for="input1"><strong>Name:</strong></label>
                             <div class="controls">
                                 <input type="text" name="contact_name" id="input1" placeholder="Your name">
                             </div>
                         </div>
                         <div class="control-group">
-                            <label class="control-label" for="input2">Email Address</label>
+                            <label class="control-label" for="input2"><strong>Email Address:</strong></label>
                             <div class="controls">
                                 <input type="text" name="contact_email" id="input2" placeholder="Your email address">
                             </div>
                         </div>
                         <div class="control-group">
-                            <label class="control-label" for="input3">Message</label>
+                            <label class="control-label" for="input3"><strong>Message:</strong></label>
                             <div class="controls">
                                 <textarea name="contact_message" id="input3" rows="8" class="span5" placeholder="What would you like to say to Matthew?"></textarea>
                             </div>
