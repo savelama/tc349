@@ -1,12 +1,11 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 if (!isset($_POST['formtype']) || $_POST['formtype'] !== 'email') {
-    header('Location: http://www.cse.msu.edu/~savelama/tc349/projects/final-site/contact.html');
+    if (isset($_POST['env']) && $_POST['env'] == 'mobile') {
+        header('Location: http://www.cse.msu.edu/~savelama/tc349/projects/final-site/mobile/contact.html');
+    } else {
+        header('Location: http://www.cse.msu.edu/~savelama/tc349/projects/final-site/contact.html');
+    }
     exit;
 } else {
     $contactName = $_POST['contact_name'];
@@ -22,7 +21,11 @@ if (!isset($_POST['formtype']) || $_POST['formtype'] !== 'email') {
     }
     
     if (isset($error)) {
-        header('Location: http://www.cse.msu.edu/~savelama/tc349/projects/final-site/contact.html?e='.urlencode($error)); 
+        if (isset($_POST['env']) && $_POST['env'] == 'mobile') {
+            header('Location: http://www.cse.msu.edu/~savelama/tc349/projects/final-site/mobile/contact.html?e='.urlencode($error)); 
+        } else {
+            header('Location: http://www.cse.msu.edu/~savelama/tc349/projects/final-site/contact.html?e='.urlencode($error)); 
+        }
         exit;
     }
     
@@ -31,8 +34,12 @@ if (!isset($_POST['formtype']) || $_POST['formtype'] !== 'email') {
     $message   .= "Message : \n\n {$contactMsg}";
     
     mail('savelama@gmail.com', "Website Contact Form ({$contactEmail})", $message);
-            
-    header('Location: http://www.cse.msu.edu/~savelama/tc349/projects/final-site/contact.html?s='.urlencode('Thank you contacting Matthew! He will respond to you as soon as possible.'));
+    
+    if (isset($_POST['env']) && $_POST['env'] == 'mobile') {
+        header('Location: http://www.cse.msu.edu/~savelama/tc349/projects/final-site/mobile/contact.html?s='.urlencode('Thank you contacting Matthew! He will respond to you as soon as possible.'));
+    } else {
+        header('Location: http://www.cse.msu.edu/~savelama/tc349/projects/final-site/contact.html?s='.urlencode('Thank you contacting Matthew! He will respond to you as soon as possible.'));
+    }
     exit;
 }
 ?>

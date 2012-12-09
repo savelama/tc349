@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Contact</title>
+
+        <!-- Sets initial viewport load and disables zooming  -->
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <!-- Set Apple icons for when prototype is saved to home screen -->
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../includes/img/touch-icons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../includes/img/touch-icons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../includes/img/touch-icons/apple-touch-icon-57x57.png">
+
+        <!-- Include the compiled Ratchet CSS -->
+        <link rel="stylesheet" href="../includes/css/ratchet.css">
+        <link rel="stylesheet" href="../includes/css/mobile.css">
+
+        <!-- Include the compiled Ratchet JS -->
+        <script src="../includes/js/ratchet.js"></script>
+    </head>
+    <body>
+        <!-- Make sure all your bars are the first things in your <body> -->
+        <header class="bar-title">
+            <a class="button-prev" href="index.html">
+                Home
+            </a>
+            <h1 class="title">Contact</h1>
+        </header>
+        <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+        <div class="content">
+            <div class="content-padded">
+                <?php
+                    if (isset($_GET['s'])) {
+                        echo "<div class=\"alert alert-success\">" . $_GET['s'] . "</div>";
+                    } elseif (isset($_GET['e'])) {
+                        echo "<div class=\"alert alert-error\">" . $_GET['e'] . "</div>";
+                    }
+                    ?>
+                <p>
+                    So you wish to get in-touch with Matthew? Well, you're in luck. There are many ways you can do so.
+                    <br /><br />
+                    E-mail: <a href="mailto:savelama@gmail.com">savelama@gmail.com</a><br />
+                    Twitter: <a href="http://twitter.com/savelama" target="_blank">@savelama</a><br />
+                    LinkedIn: <a href="http://www.linkedin.com/pub/matthew-savela/5a/973/928" target="_blank">Matthew's LinkedIn Profile</a>
+                    <br /><br />
+                    If you would prefer, you can also use the form before to send an e-mail to him!
+                </p>
+                <br />
+                <form method="post" action="../includes/formpost.php">
+                    <input type="hidden" name="formtype" value="email">
+                    <input type="hidden" name="env" value="mobile">
+                    <input type="text" name="contact_name" placeholder="Your Name">
+                    <input type="text" name="contact_email" placeholder="Your E-mail">
+                    <textarea rows="5" name="contact_message" placeholder="Your Message"></textarea>
+                    <button class="button button-block" type="submit" style="width: 100%;">Send</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
