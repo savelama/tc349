@@ -33,14 +33,14 @@
         </header>
         <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
         <div class="content">
-            <div class="content-padded">
-                <?php
+            <?php
                     if (isset($_GET['s'])) {
                         echo "<div class=\"alert alert-success\">" . $_GET['s'] . "</div>";
                     } elseif (isset($_GET['e'])) {
                         echo "<div class=\"alert alert-error\">" . $_GET['e'] . "</div>";
                     }
-                    ?>
+                ?>
+            <div class="content-padded">
                 <p>
                     So you wish to get in-touch with Matthew? Well, you're in luck. There are many ways you can do so.
                     <br /><br />

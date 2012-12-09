@@ -21,3 +21,7 @@
   border-color: #eed3d7;
   color: #b94a48;
 }
+
+.pull-center img {
+    text-align: center;
+}
