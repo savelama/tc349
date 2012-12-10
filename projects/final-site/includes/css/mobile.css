@@ -2,6 +2,10 @@
     padding: 10px 0px;
 }
 
+.indent {
+    margin-left: 10px;
+}
+
 .alert {
     border: 1px solid #fbeed5;
     padding: 8px 35px 8px 14px;
@@ -24,4 +28,8 @@
 
 .pull-center img {
     text-align: center;
+}
+
+.courses li {
+    padding-bottom: 5px;
 }
